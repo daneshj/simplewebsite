@@ -1,0 +1,16 @@
+<?php
+
+define('DB_FILENAME', 'myapp.data');
+
+define('SITE_URL', 'http://localhost/faradars/php-s20/project20/');
+
+define('SITE_PATH', __DIR__ . DIRECTORY_SEPARATOR);
+
+define('APP_TITLE', 'برنامه اول من');
+
+foreach(glob('lib/*.php') as $lib_file) {
+    include_once($lib_file);
+}
+
+create_db_tables();
+initialize_users();
